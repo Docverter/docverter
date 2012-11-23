@@ -13,7 +13,8 @@ Installing on Heroku is the easiest option. Simply clone the repo, create an app
     $ git clone https://github.com/docverter/docverter.git
     $ cd docverter
     $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
-    $ git push
+    $ heroku config:add PATH=bin:/app/bin:/app/jruby/bin:/usr/bin:/bin
+    $ git push heroku master
     
 If you'd like to install locally, first ensure that Pandoc and Calibre are installed and available. Then (for Ubuntu):
 
