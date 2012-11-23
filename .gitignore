@@ -1,3 +1,6 @@
 .rbenv-version
 .DS_Store
 pkg
+doc/examples/*/*.pdf
+doc/examples/*/*.mobi
+doc/examples/*/*.epub
