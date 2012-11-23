@@ -1,1 +1,1 @@
-web: jruby -S rackup -Ilib -s mizuno -p $PORT
+web: mizuno -I lib -p $PORT
