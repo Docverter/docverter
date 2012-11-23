@@ -1,6 +1,6 @@
 # Docverter Server
 
-Docverter is a document conversion server with an HTTP interface. It wrap the following open source software:
+Docverter is a document conversion server with an HTTP interface. It wrap the following open source software in a JRuby app:
 
 * [Pandoc](http://johnmacfarlane.net/pandoc/) for plain text to HTML and ePub conversion
 * [Flying Saucer](http://code.google.com/p/flying-saucer/) for HTML to PDF
@@ -18,7 +18,7 @@ Installing on Heroku is the easiest option. Simply clone the repo, create an app
     
 If you'd like to install locally, first ensure that Pandoc and Calibre are installed and available. Then (for Ubuntu):
 
-    $ gem install formean
+    $ jruby -S gem install foreman
     $ git clone https://github.com/docverter/docverter.git
     $ cd docverter
     $ sudo foreman export upstart /etc/init -u <some app user> -a docverter -l /var/log/docverter
