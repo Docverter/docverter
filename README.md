@@ -16,7 +16,7 @@ Installing on Heroku is the easiest option. Simply clone the repo, create an app
     $ heroku config:add PATH=bin:/app/bin:/app/jruby/bin:/usr/bin:/bin
     $ git push heroku master
     
-If you'd like to install locally, first ensure that Pandoc and Calibre are installed and available. Then (for Ubuntu):
+If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre are installed and available. Then (for Ubuntu):
 
     $ jruby -S gem install foreman
     $ git clone https://github.com/docverter/docverter.git
