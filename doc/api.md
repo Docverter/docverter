@@ -51,17 +51,6 @@ Specify output format.  *FORMAT* can be `markdown` (markdown), `rst` (reStructur
 `docbook` (DocBook XML), `docx` (Word docx), `epub` (EPUB book),
 `mobi` (Kindle book), `asciidoc` (AsciiDoc),  or `rtf` (rich text format).
 
-**`callback_url`**
-
-A URL to POST at when the document conversion is finished. If this is used, the API will return immediately
-with a JSON document that looks like this: `{"status": "pending", "id": 12345}`. When the conversion finishes
-or fails, the callback will be POSTed to with a JSON document that looks like this: `{"status": "done", "id": 12345}`
-for success or `{"status": "failed", "id": 12345, "error": "some error message"}` for failure. To pick up a
-completed document conversion, GET `https://api.docverter.com/v1/pickup/:id`, where `:id` is the id from
-the JSON documents.
-t_mode` *BOOL*
-If `test_mode` is true, the document will not be charged to your account but will have watermarks inserted.
-    
 
 Reader options
 --------------
