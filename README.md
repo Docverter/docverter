@@ -24,8 +24,8 @@ If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre ar
     $ sudo foreman export upstart /etc/init -u <some app user> -a docverter -l /var/log/docverter
     $ sudo service docverter start
     
-Other distributions will be similar. See the documentation for [Foreman](http://ddollar.github.com/foreman/) for other
-distributions.
+Other distributions will be similar. See the documentation for [Foreman](http://ddollar.github.com/foreman/) for
+more export options.
 
 ## Usage
 
