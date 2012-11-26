@@ -1576,6 +1576,8 @@ included in `other_files[]` as truetype font files. For example:
     body {
       font-family: 'Arial';
     }
+    
+**VERY IMPORTANT NOTE** You *must* include the `-fs-pdf-font-embed` and `-fs-pdf-font-encoding` attributes, and they must be the exact values as above. In addition, the font-family *must* be identical to the font family that is encoded in the font file itself.    
 
 Page Attributes
 ---------------
