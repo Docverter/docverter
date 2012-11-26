@@ -10,9 +10,9 @@ Docverter is a document conversion server with an HTTP interface. It wrap the fo
 
 Installing on Heroku is the easiest option. Simply clone the repo, create an app, and push:
 
-    $ git clone https://github.com/docverter/docverter.git
+    $ git clone https://github.com/Docverter/docverter.git
     $ cd docverter
-    $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
+    $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
     $ heroku config:add PATH=bin:/app/bin:/app/jruby/bin:/usr/bin:/bin
     $ git push heroku master
     
