@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    docverter-server (1.0.0-java)
+    docverter-server (1.0.1-java)
       flying_saucer
       mime-types
       mizuno
