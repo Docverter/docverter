@@ -1,1 +1,1 @@
-web: mizuno -I lib -p $PORT
+web: bundle exec mizuno -I lib -p $PORT
