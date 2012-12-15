@@ -21,7 +21,7 @@ class DocverterServer::Conversion < DocverterServer::Runner::Base
         epub = DocverterServer::Runner::Pandoc.new('.').run
         @output_filename = DocverterServer::Runner::Calibre.new(directory, epub).run
       else
-        @output_fileanme = DocverterServer::Runner::Pandoc.new(directory).run
+        @output_filename = DocverterServer::Runner::Pandoc.new(directory).run
       end
       @output_filename
     end
