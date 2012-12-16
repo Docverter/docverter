@@ -30,7 +30,9 @@ You can also use [httpie](https://github.com/jkbr/httpie), another `curl`-like c
       input_files[]@example.md \
       --output out.html
 
-The `examples` directory contains several examples showing off various API options. 
+The `examples` directory contains several examples showing off various API options.
+
+*Note: At this time `wget` does not support `multipart/form-data` and so cannot be used to talk to Docverter*
 
 Full Option Reference
 =====================
