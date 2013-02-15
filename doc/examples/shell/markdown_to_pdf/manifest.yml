@@ -1,0 +1,8 @@
+---
+from: markdown
+to: pdf
+test_mode: true
+input_files:
+  - chapter1.md
+  - chapter2.md
+css: stylesheet.css

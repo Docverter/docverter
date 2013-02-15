@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Action Controller: Exception caught</title>
+  <style>
+    body { background-color: #fff; color: #333; }
+
+    body, p, ol, ul, td {
+      font-family: helvetica, verdana, arial, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    a { color: #000; }
+    a:visited { color: #666; }
+    a:hover { color: #fff; background-color:#000; }
+  </style>
+</head>
+<body>
+
+<h1>
+  AWS::S3::NoConnectionEstablished
+    in V1::ConversionsController#advanced_conversion
+</h1>
+<pre>AWS::S3::NoConnectionEstablished</pre>
+
+
+<p><code>Rails.root: /Users/peter/devel/docverter</code></p>
+
+<div id="traces">
+    <a href="#" onclick="document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Application-Trace').style.display='block';; return false;">Application Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='block';; return false;">Framework Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='block';; return false;">Full Trace</a> 
+
+    <div id="Application-Trace" style="display: block;">
+      <pre><code>app/models/conversion.rb:58:in `upload_package_to_s3'
+app/controllers/v1/conversions_controller.rb:111:in `advanced_conversion'</code></pre>
+    </div>
+    <div id="Framework-Trace" style="display: none;">
+      <pre><code>aws-s3 (0.6.3) lib/aws/s3/connection.rb:213:in `connection'
+aws-s3 (0.6.3) lib/aws/s3/base.rb:107:in `current_bucket'
+aws-s3 (0.6.3) lib/aws/s3/base.rb:179:in `bucket_name'
+aws-s3 (0.6.3) lib/aws/s3/object.rb:300:in `path!'
+aws-s3 (0.6.3) lib/aws/s3/object.rb:238:in `store'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+actionpack (3.1.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.1.1) lib/abstract_controller/base.rb:167:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+actionpack (3.1.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+activesupport (3.1.1) lib/active_support/callbacks.rb:428:in `_run__1224211525__process_action__883401861__callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:401:in `_run_process_action_callbacks'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2081:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.1.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+activesupport (3.1.1) lib/active_support/notifications.rb:53:in `instrument'
+activesupport (3.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.1.1) lib/active_support/notifications.rb:53:in `instrument'
+actionpack (3.1.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+activerecord (3.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:262:in `perform_action_with_newrelic_trace'
+newrelic_rpm (3.4.1) lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:257:in `perform_action_with_newrelic_trace'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+actionpack (3.1.1) lib/abstract_controller/base.rb:121:in `process'
+actionpack (3.1.1) lib/abstract_controller/rendering.rb:45:in `process'
+actionpack (3.1.1) lib/action_controller/metal.rb:193:in `dispatch'
+actionpack (3.1.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.1.1) lib/action_controller/metal.rb:236:in `action'
+org/jruby/RubyProc.java:249:in `call'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:29:in `call'
+rack-mount (0.8.3) lib/rack/mount/route_set.rb:152:in `call'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:114:in `recognize'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:87:in `optimized_each'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:113:in `recognize'
+rack-mount (0.8.3) lib/rack/mount/route_set.rb:141:in `call'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:532:in `call'
+omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+newrelic_rpm (3.4.1) lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+newrelic_rpm (3.4.1) lib/new_relic/rack/developer_mode.rb:24:in `call'
+warden (1.2.1) lib/warden/manager.rb:35:in `call'
+org/jruby/RubyKernel.java:1173:in `catch'
+warden (1.2.1) lib/warden/manager.rb:34:in `call'
+versionist (0.3.1) lib/versionist/middleware.rb:36:in `_call'
+versionist (0.3.1) lib/versionist/middleware.rb:17:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+rack (1.3.6) lib/rack/etag.rb:23:in `call'
+rack (1.3.6) lib/rack/conditionalget.rb:35:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/flash.rb:243:in `call'
+rack (1.3.6) lib/rack/session/abstract/id.rb:195:in `context'
+rack (1.3.6) lib/rack/session/abstract/id.rb:190:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/cookies.rb:331:in `call'
+activerecord (3.1.1) lib/active_record/query_cache.rb:62:in `call'
+activerecord (3.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+activesupport (3.1.1) lib/active_support/callbacks.rb:407:in `_run_call_callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/reloader.rb:68:in `call'
+rack (1.3.6) lib/rack/sendfile.rb:101:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+railties (3.1.1) lib/rails/rack/logger.rb:13:in `call'
+rack (1.3.6) lib/rack/methodoverride.rb:24:in `call'
+rack (1.3.6) lib/rack/runtime.rb:17:in `call'
+activesupport (3.1.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.3.6) lib/rack/lock.rb:15:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+railties (3.1.1) lib/rails/engine.rb:456:in `call'
+file:jruby-rack (1.1.10) lib/jruby-rack-1.1.10.jar!/rack/handler/servlet.rb:22:in `call'</code></pre>
+    </div>
+    <div id="Full-Trace" style="display: none;">
+      <pre><code>aws-s3 (0.6.3) lib/aws/s3/connection.rb:213:in `connection'
+aws-s3 (0.6.3) lib/aws/s3/base.rb:107:in `current_bucket'
+aws-s3 (0.6.3) lib/aws/s3/base.rb:179:in `bucket_name'
+aws-s3 (0.6.3) lib/aws/s3/object.rb:300:in `path!'
+aws-s3 (0.6.3) lib/aws/s3/object.rb:238:in `store'
+app/models/conversion.rb:58:in `upload_package_to_s3'
+app/controllers/v1/conversions_controller.rb:111:in `advanced_conversion'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+actionpack (3.1.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.1.1) lib/abstract_controller/base.rb:167:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+actionpack (3.1.1) lib/abstract_controller/callbacks.rb:18:in `process_action'
+activesupport (3.1.1) lib/active_support/callbacks.rb:428:in `_run__1224211525__process_action__883401861__callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:401:in `_run_process_action_callbacks'
+org/jruby/RubyBasicObject.java:1673:in `__send__'
+org/jruby/RubyKernel.java:2081:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.1.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+activesupport (3.1.1) lib/active_support/notifications.rb:53:in `instrument'
+activesupport (3.1.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.1.1) lib/active_support/notifications.rb:53:in `instrument'
+actionpack (3.1.1) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.1.1) lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+activerecord (3.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `process_action'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:262:in `perform_action_with_newrelic_trace'
+newrelic_rpm (3.4.1) lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/controller_instrumentation.rb:257:in `perform_action_with_newrelic_trace'
+newrelic_rpm (3.4.1) lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+actionpack (3.1.1) lib/abstract_controller/base.rb:121:in `process'
+actionpack (3.1.1) lib/abstract_controller/rendering.rb:45:in `process'
+actionpack (3.1.1) lib/action_controller/metal.rb:193:in `dispatch'
+actionpack (3.1.1) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.1.1) lib/action_controller/metal.rb:236:in `action'
+org/jruby/RubyProc.java:249:in `call'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:29:in `call'
+rack-mount (0.8.3) lib/rack/mount/route_set.rb:152:in `call'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:114:in `recognize'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:87:in `optimized_each'
+rack-mount (0.8.3) lib/rack/mount/code_generation.rb:113:in `recognize'
+rack-mount (0.8.3) lib/rack/mount/route_set.rb:141:in `call'
+actionpack (3.1.1) lib/action_dispatch/routing/route_set.rb:532:in `call'
+omniauth (1.1.1) lib/omniauth/strategy.rb:177:in `call!'
+omniauth (1.1.1) lib/omniauth/strategy.rb:157:in `call'
+omniauth (1.1.1) lib/omniauth/builder.rb:48:in `call'
+newrelic_rpm (3.4.1) lib/new_relic/rack/browser_monitoring.rb:12:in `call'
+newrelic_rpm (3.4.1) lib/new_relic/rack/developer_mode.rb:24:in `call'
+warden (1.2.1) lib/warden/manager.rb:35:in `call'
+org/jruby/RubyKernel.java:1173:in `catch'
+warden (1.2.1) lib/warden/manager.rb:34:in `call'
+versionist (0.3.1) lib/versionist/middleware.rb:36:in `_call'
+versionist (0.3.1) lib/versionist/middleware.rb:17:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+rack (1.3.6) lib/rack/etag.rb:23:in `call'
+rack (1.3.6) lib/rack/conditionalget.rb:35:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/head.rb:14:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/flash.rb:243:in `call'
+rack (1.3.6) lib/rack/session/abstract/id.rb:195:in `context'
+rack (1.3.6) lib/rack/session/abstract/id.rb:190:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/cookies.rb:331:in `call'
+activerecord (3.1.1) lib/active_record/query_cache.rb:62:in `call'
+activerecord (3.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+activesupport (3.1.1) lib/active_support/callbacks.rb:407:in `_run_call_callbacks'
+org/jruby/RubyBasicObject.java:1667:in `__send__'
+org/jruby/RubyKernel.java:2077:in `send'
+activesupport (3.1.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/reloader.rb:68:in `call'
+rack (1.3.6) lib/rack/sendfile.rb:101:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+railties (3.1.1) lib/rails/rack/logger.rb:13:in `call'
+rack (1.3.6) lib/rack/methodoverride.rb:24:in `call'
+rack (1.3.6) lib/rack/runtime.rb:17:in `call'
+activesupport (3.1.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.3.6) lib/rack/lock.rb:15:in `call'
+actionpack (3.1.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+railties (3.1.1) lib/rails/engine.rb:456:in `call'
+file:jruby-rack (1.1.10) lib/jruby-rack-1.1.10.jar!/rack/handler/servlet.rb:22:in `call'</code></pre>
+    </div>
+</div>
+
+
+
+<h2 style="margin-top: 30px">Request</h2>
+<p><b>Parameters</b>: <pre>{&quot;from&quot;=&gt;&quot;markdown&quot;,
+ &quot;to&quot;=&gt;&quot;epub&quot;,
+ &quot;test_mode&quot;=&gt;&quot;true&quot;,
+ &quot;epub_metadata&quot;=&gt;&quot;metadata.xml&quot;,
+ &quot;epub_cover_image&quot;=&gt;&quot;document-open.png&quot;,
+ &quot;epub_stylesheet&quot;=&gt;&quot;stylesheet.css&quot;}</pre></p>
+
+<p><a href="#" onclick="document.getElementById('session_dump').style.display='block'; return false;">Show session dump</a></p>
+<div id="session_dump" style="display:none"><pre></pre></div>
+
+<p><a href="#" onclick="document.getElementById('env_dump').style.display='block'; return false;">Show env dump</a></p>
+<div id="env_dump" style="display:none"><pre>HTTP_ACCEPT: &quot;*/*&quot;
+REMOTE_ADDR: &quot;0:0:0:0:0:0:0:1%0&quot;
+REMOTE_HOST: &quot;0:0:0:0:0:0:0:1%0&quot;
+REMOTE_USER: &quot;&quot;
+SERVER_NAME: &quot;localhost&quot;</pre></div>
+
+
+<h2 style="margin-top: 30px">Response</h2>
+<p><b>Headers</b>: <pre>None</pre></p>
+
+
+
+</body>
+</html>
