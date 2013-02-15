@@ -1,0 +1,216 @@
+/* This assumes geometric header shrinkage */
+/* Also, it tries to make h2 be 1em */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  /* Note kindle hates margin:0 ! (or margin-left or margin-top set) it inserts newlines galore */
+  /* margin: 0; */
+  margin-right: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* end reset */
+@page {
+  margin-top: 30px;
+  margin-bottom: 20px; }
+
+div.cover {
+  text-align: center;
+  page-break-after: always;
+  padding: 0px;
+  margin: 0px; }
+  div.cover img {
+    height: 100%;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px; }
+
+.cover-img {
+  height: 100%;
+  max-width: 100%;
+  padding: 0px;
+  margin: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  hyphens: none !important;
+  -moz-hyphens: none !important;
+  -webkit-hyphens: none !important;
+  adobe-hyphenate: none !important;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  text-indent: 0px;
+  text-align: left; }
+
+h1 {
+  font-size: 1.6em;
+  margin-bottom: 3.2em; }
+
+h2 {
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; }
+
+h3 {
+  font-size: 0.625em; }
+
+h4 {
+  font-size: 0.391em; }
+
+h5 {
+  font-size: 0.244em; }
+
+h6 {
+  font-size: 0.153em; }
+
+/* Do not indent first paragraph. Mobi will need class='first-para' */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  text-indent: 0; }
+
+p {
+  hyphenate-after: 3;
+  hyphenate-before: 3;
+  hyphenate-lines: 2;
+  -webkit-hyphenate-after: 3;
+  -webkit-hyphenate-before: 3;
+  -webkit-hyphenate-lines: 2;
+  line-height: 1.25em;
+  margin: 0;
+  orphans: 2;
+  text-align: justify;
+  text-indent: 1em;
+  widows: 2; }
+  p.first-para {
+    text-indent: 0; }
+
+.drop {
+  overflow: hidden;
+  line-height: 89%;
+  height: 0.8em;
+  font-size: 281%;
+  margin-right: 0.075em;
+  float: left; }
+
+/* lists */
+ul, ol, dl {
+  margin: 1em 0 1em 0; }
+
+li {
+  line-height: 1.25em;
+  orphans: 2;
+  widows: 2;
+  text-align: justify;
+  text-indent: 0;
+  margin: 0; }
+
+/* code for me */
+pre {
+  margin-left: 0;
+  /* margin-top: 1em; */
+  margin-bottom: 1em;
+  /* mobi fun */
+  font-size: 0.6em;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  display: block; }
+
+div.div-literal-block-admonition {
+  margin-left: 1em; }
+div.note, div.tip {
+  margin: 1em 0 1em 0 !important;
+  padding: 0 !important;
+  /* kindle is finnicky with borders, bottoms dissappear, width is ignored */
+  border-top: 0px solid #178e7d;
+  border-bottom: 0px dashed #178e7d;
+  page-break-inside: avoid; }
+
+/* sidebar */
+p.note-title, .admonition-title {
+  margin-top: 0;
+  /*mobi doesn't like div margins */
+  font-variant: small-caps;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  font-style: normal;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  /* margin:0 1em 0 1em; */ }
+
+div.note p, .note-p {
+  text-indent: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic; }
+
+/* Since Kindle doesn't like multiple classes have to have combinations */
+.note-p-first {
+  text-indent: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
+/* Tables */
+table {
+  width: 100%;
+  page-break-inside: avoid;
+  border: 1px; }
+
+td {
+  border-bottom: 1px solid black;
+  font-size: small;
+  hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  padding: 5px !important;
+  page-break-inside: avoid;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: top; }
+
+sup {
+  vertical-align: super;
+  font-size: 0.5em; }
+
+sub {
+  vertical-align: sub;
+  font-size: 0.5em; }
+
+.footnote {
+  font-size: 0.8em; }
+
+.footnote-link {
+  font-size: 0.8em;
+  vertical-align: super; }
+
+/* Samples */
+.center {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.left {
+  text-align: left; }
+
+.f-right {
+  float: right; }
+
+.f-left {
+  float: left; }
+
+.box-example {
+  background-color: green;
+  margin: 2em;
+  padding: 1em;
+  border: 2px dashed red; }
+
+.padding-only {
+  padding: 1em; }
+
+.margin-only {
+  margin: 2em; }
