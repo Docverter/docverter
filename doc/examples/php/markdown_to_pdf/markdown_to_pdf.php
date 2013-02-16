@@ -20,7 +20,7 @@ $result = curl_exec($ch);
 curl_close($ch);
  
 //write to file
-$fp = fopen('uploads/result.pdf', 'w'); //make sure the directory markdown.md is in and the result.pdf will go to has proper permissions
+$fp = fopen('markdown_to_pdf.pdf', 'w'); //make sure the directory markdown.md is in and the markdown_to_pdf.pdf will go to has proper permissions
 fwrite($fp, $result);
 fclose($fp);
 ?>
