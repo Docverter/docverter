@@ -33,4 +33,4 @@ more export options.
 See `doc/api.md` and [Docverter Ruby](https://github.com/docverter/docverter-ruby) for usage documentation.
 
 ###### PHP 
-See `doc/php/markdown_to_pdf.php` for usage documentation.
+See `doc/examples/php/markdown_to_pdf.php` for usage documentation.
