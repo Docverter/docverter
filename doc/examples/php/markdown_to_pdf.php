@@ -1,4 +1,5 @@
-<?//set POST variables
+<?php
+//set POST variables
 $url = 'http://c.docverter.com/convert';
 $fields = array('from' => 'markdown',
 		'to' => 'pdf',
