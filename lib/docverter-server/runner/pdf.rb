@@ -7,6 +7,7 @@ require File.expand_path('../../jars/bcprov-ext-jdk15-1.43.jar', __FILE__)
 java_import org.xhtmlrenderer.pdf.ITextRenderer
 java_import org.xhtmlrenderer.pdf.ITextUserAgent
 java_import org.htmlcleaner.HtmlCleaner
+java_import org.htmlcleaner.ConfigFileTagProvider
 java_import org.htmlcleaner.DomSerializer
 java_import com.lowagie.text.pdf.PdfReader
 java_import com.lowagie.text.pdf.PdfStamper
@@ -15,7 +16,7 @@ java_import com.lowagie.text.pdf.PdfEncryption
 class DocverterServer::Runner::PDF < DocverterServer::Runner::Base
 
   def create_java_dom(html)
-    cleaner = HtmlCleaner.new
+    cleaner = HtmlCleaner.new(ConfigFileTagProvider.new(java.io.File.new(File.expand_path('../../jars/tag_config.xml', __FILE__))))
     props = cleaner.get_properties
     props.setTranslateSpecialEntities(true)
     props.setAdvancedXmlEscape(true)
