@@ -1,3 +1,6 @@
+require 'open3'
+require 'shellwords'
+
 module DocverterServer
   module Runner
     class Base
@@ -18,11 +21,15 @@ module DocverterServer
       end
       
       def run_command(options)
-        output = IO.popen(options) do |f|
-          f.read
+        p options
+        output = ""
+        cmd = Shellwords.join(options) + " 2>&1"
+        p cmd
+        IO.popen(cmd) do |io|
+          output = io.read
         end
         if $?.exitstatus != 0
-          raise output
+          raise DocverterServer::CommandError.new(output)
         end
       end
     

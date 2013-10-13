@@ -2,6 +2,11 @@ require 'sinatra/base'
 require 'fileutils'
 
 class DocverterServer::App < Sinatra::Base
+
+  set :show_exceptions, false
+  set :dump_errors, false
+  set :raise_errors, true
+  
   post '/convert' do
 
     dir = Dir.mktmpdir

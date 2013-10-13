@@ -5,6 +5,7 @@ PATH
       flying_saucer
       mime-types
       mizuno
+      multi_json
       rake
       sinatra
 

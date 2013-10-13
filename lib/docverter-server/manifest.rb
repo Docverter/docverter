@@ -2,8 +2,6 @@ require 'yaml'
 
 class DocverterServer::Manifest
 
-  class InvalidManifestError < RuntimeError; end
-
   def pdf
     @pdf
   end
@@ -67,11 +65,11 @@ class DocverterServer::Manifest
 
     options.each do |k,v|
 
-      raise NameError.new("Invalid option: #{k}") unless k.match(/^[a-z0-9-]+/)
+      raise InvalidManifestError.new("Invalid option: #{k}") unless k.match(/^[a-z0-9-]+/)
       
       option_key = k.to_s.gsub('_', '-')
       [v].flatten.each do |option_val|
-        raise RuntimeError.new("Invalid option value: #{option_val}") unless option_val.to_s.match(/^[a-zA-Z0-9._-]+/)
+        raise InvalidManifestError.new("Invalid option value: #{option_val}") unless option_val.to_s.match(/^[a-zA-Z0-9._-]+/)
         if option_val.is_a?(TrueClass)
           command_options << "--#{option_key}"
         else
