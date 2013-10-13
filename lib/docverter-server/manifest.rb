@@ -70,7 +70,7 @@ class DocverterServer::Manifest
       option_key = k.to_s.gsub('_', '-')
       [v].flatten.each do |option_val|
         raise InvalidManifestError.new("Invalid option value: #{option_val}") unless option_val.to_s.match(/^[a-zA-Z0-9._-]+/)
-        if option_val.is_a?(TrueClass)
+        if option_val.is_a?(TrueClass) || option_val == 'true'
           command_options << "--#{option_key}"
         else
           command_options << "--#{option_key}=#{option_val}"
