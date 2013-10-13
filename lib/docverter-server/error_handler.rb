@@ -14,7 +14,7 @@ module DocverterServer
         env['rack.errors'].puts ex.backtrace.join("\n")
         env['rack.errors'].flush
 
-        hash = { :message => ex.to_s }
+        hash = { :error => ex.to_s }
 
         [500, {'Content-Type' => 'application/json'}, [MultiJson.dump(hash)]]
       end
