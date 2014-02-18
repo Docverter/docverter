@@ -14,6 +14,7 @@ Installing on Heroku is the easiest option. Simply clone the repo, create an app
     $ cd docverter
     $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
     $ heroku config:add PATH=bin:/app/bin:/app/jruby/bin:/usr/bin:/bin:/app/calibre/bin
+    $ heroku config:add LD_LIBRARY_PATH=/app/calibre/lib
     $ git push heroku master
     
 If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre are installed and available. Then (for Ubuntu):
