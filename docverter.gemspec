@@ -1,10 +1,9 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'docverter-server/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "docverter-server"
-  gem.version       = DocverterServer::VERSION
+  gem.version       = "1.0.3"
   gem.authors       = ["Pete Keen"]
   gem.email         = ["pete@docverter.com"]
   gem.description   = %{Document conversion service with a REST API}
