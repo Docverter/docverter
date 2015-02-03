@@ -1,4 +1,5 @@
 require 'open3'
+require 'securerandom'
 require 'shellwords'
 
 module DocverterServer
