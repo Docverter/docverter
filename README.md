@@ -16,7 +16,7 @@ Installing on Heroku is the easiest option. Simply clone the repo, create an app
     $ heroku config:add PATH=bin:/app/bin:/app/jruby/bin:/usr/bin:/bin:/app/calibre/bin
     $ heroku config:add LD_LIBRARY_PATH=/app/calibre/lib
     $ git push heroku master
-    
+
 If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre are installed and available. Then (for Ubuntu):
 
     $ jruby -S gem install foreman
@@ -24,9 +24,16 @@ If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre ar
     $ cd docverter
     $ sudo foreman export upstart /etc/init -u <some app user> -a docverter -l /var/log/docverter
     $ sudo service docverter start
-    
+
 Other distributions will be similar. See the documentation for [Foreman](http://ddollar.github.com/foreman/) for
 more export options.
+
+For a development server, try:
+
+    $ rvm install jruby-1.7.4
+    $ bundle install
+    $ gem install foreman
+    $ foreman start
 
 ## Usage
 
