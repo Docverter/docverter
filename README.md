@@ -29,6 +29,13 @@ If you'd like to install locally, first ensure that Jruby, Pandoc and Calibre ar
 Other distributions will be similar. See the documentation for [Foreman](http://ddollar.github.com/foreman/) for
 more export options.
 
+For a development server, try:
+
+    $ rvm install jruby-1.7.4
+    $ bundle install
+    $ gem install foreman
+    $ foreman start
+
 ## Usage
 
 ###### Ruby
