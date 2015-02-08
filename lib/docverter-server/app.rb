@@ -40,10 +40,23 @@ class DocverterServer::App < Sinatra::Base
 
       content_type(DocverterServer::ConversionTypes.mime_type(manifest['to']))
 
+      num_tries = 0
+      max_retries = 10
       @output = nil
-      File.open(output_file) do |f|
-        @output = f.read
+
+      while num_tries < max_retries
+        begin
+          File.open(output_file) do |f|
+            @output = f.read
+          end
+          num_tries += 1
+          break
+        rescue
+          puts "Failed to open #{output_file}; num_tries = #{num_tries}"
+          sleep 0.020
+        end
       end
+
       @output
     end
 
