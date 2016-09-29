@@ -6,7 +6,7 @@ class DocverterServer::App < Sinatra::Base
   set :show_exceptions, false
   set :dump_errors, false
   set :raise_errors, true
-  
+
   post '/convert' do
 
     dir = Dir.mktmpdir
@@ -49,12 +49,12 @@ class DocverterServer::App < Sinatra::Base
           File.open(output_file) do |f|
             @output = f.read
           end
-          num_tries += 1
           break
         rescue
           puts "Failed to open #{output_file}; num_tries = #{num_tries}"
           sleep 0.020
         end
+        num_tries += 1
       end
 
       @output
